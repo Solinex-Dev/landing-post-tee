@@ -117,9 +117,9 @@ export default function App() {
   );
 }
 
-/* ---------------- PostCard Component ---------------- */
+/*PostCard Component*/
 function PostCard({ post, user, comments, onShowAllComments }) {
-  const visibleComments = comments.slice(0, 3);
+  const visibleComments = comments.slice(0, 1);
   const [liked, setLiked] = useState(false);
 
   return (
@@ -132,7 +132,7 @@ function PostCard({ post, user, comments, onShowAllComments }) {
 
       {/* Content */}
       <div>
-        <h2 className="font-bold text-gray-900 text-lg">{post.title}</h2>
+        <h2 className="font-bold text-gray-900 text-lg">({post.id}){post.title}</h2>
         <p className="text-gray-700 mt-1">{post.body}</p>
       </div>
 
